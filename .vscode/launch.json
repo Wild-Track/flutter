@@ -59,6 +59,15 @@
             "cwd": "tp2\\monalisa",
             "request": "launch",
             "type": "dart"
-        }
+        },
+        {
+            "name": "tp3",
+            "cwd": "tp3\\pomme_poire_ananas",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--web-port=3200",
+            ]
+        },
     ]
 }
