@@ -69,5 +69,14 @@
                 "--web-port=3200",
             ]
         },
+        {
+            "name": "tp4",
+            "cwd": "tp4\\casino",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--web-port=3200",
+            ]
+        },
     ]
 }
