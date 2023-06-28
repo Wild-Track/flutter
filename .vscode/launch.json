@@ -91,5 +91,15 @@
             ],
             "deviceId": "edge"
         },
+        {
+            "name": "tp6",
+            "cwd": "tp6\\finder",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--web-port=3200",
+            ],
+            "deviceId": "edge"
+        },
     ]
 }
