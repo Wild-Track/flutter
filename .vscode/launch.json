@@ -78,5 +78,18 @@
                 "--web-port=3200",
             ]
         },
+        {
+            "name": "tp5",
+            "cwd": "tp5\\finder",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--web-port=3200",
+                // Utilser l'extension dart debug extension (Mais problème pour ouvrir le devtool ??????)
+                // "-d",
+                // "web-server",
+            ],
+            "deviceId": "edge"
+        },
     ]
 }
