@@ -1,4 +1,4 @@
-import 'package:exo4/exo4.dart' as exo4;
+// ignore_for_file: unused_element
 
 void main(List<String> arguments) {
   print('1/');
