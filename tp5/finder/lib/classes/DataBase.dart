@@ -8,6 +8,7 @@ class Database {
   static List<Bachelor> getFakeBachelors() {
     final faker = Faker();
 
+    const int numberOfPeopleByGender = 15;
     final List<Bachelor> bachelors = [];
     final List<String> maleFirstNames = [];
     final List<String> femaleFirstNames = [];
@@ -21,13 +22,17 @@ class Database {
       femaleAvatars.add('images/woman-$i.png');
     }
 
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 30; i++) {
       final lastName = faker.person.lastName();
 
-      final gender = i < 5 ? Gender.male : Gender.female;
-      final firstName = gender == Gender.male ? maleFirstNames[i] : femaleFirstNames[i];
+      int index = faker.randomGenerator.integer(numberOfPeopleByGender - 1);
+      final gender = i < 15 ? Gender.male : Gender.female;
+      final firstName = gender == Gender.male
+          ? maleFirstNames[index]
+          : femaleFirstNames[index];
 
-      final avatar = gender == Gender.male ? maleAvatars[i] : femaleAvatars[i];
+      final avatar =
+          gender == Gender.male ? maleAvatars[index] : femaleAvatars[index];
 
       final bachelor = Bachelor(
         firstname: firstName,
@@ -36,7 +41,7 @@ class Database {
         avatar: avatar,
         searchFor: [],
         job: faker.job.title(),
-        description: faker.lorem.sentences(2).join(' '),
+        description: faker.lorem.sentences(10).join(' '),
       );
 
       bachelors.add(bachelor);
