@@ -111,5 +111,15 @@
             ],
             "deviceId": "edge"
         },
+        {
+            "name": "tp8",
+            "cwd": "tp8\\finder",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--web-port=3200",
+            ],
+            "deviceId": "edge"
+        },
     ]
 }
